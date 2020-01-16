@@ -58,7 +58,17 @@ Tomcat started.
 
 ```
 
-## Access it in browser
+## Access it <%@ page language="java" contentType="text/html"%>
+<%@ page import="java.text.*,java.util.*" %>
+<html>
+<head>
+<title>Date JSP</title>
+</head>
+<% SimpleDateFormat sdf=new SimpleDateFormat("MM/dd/yyyy"); %>
+<body>
+<h1>Welcome to Tomcat! Today is <%= sdf.format(new Date()) %></h1>
+</body>
+</html>in browser
 
 Tomcat works on port 8080 default 
 
@@ -66,12 +76,29 @@ Tomcat works on port 8080 default
 
 ## Run a jsp in Apache tomcat 
 
-Now open any text editor , write code .jsp 
+Now open any text editor , write code file.jsp 
+
+### File.jsp
+```
+<%@ page language="java" contentType="text/html"%>
+<%@ page import="java.text.*,java.util.*" %>
+<html>
+<head>
+<title>Date JSP</title>
+</head>
+<% SimpleDateFormat sdf=new SimpleDateFormat("MM/dd/yyyy"); %>
+<body>
+<h1>Welcome to Tomcat! Today is <%= sdf.format(new Date()) %></h1>
+</body>
+</html>
+```
 
 Move the file under ``` /usr/local/tomcat7/webapps/ROOT ```
 
 Start Tomcat server again !!!
 
+In the browser type http://localhost:8080/file.jsp
 
+![file](file.png)
 
 
