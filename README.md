@@ -1,41 +1,41 @@
-# Web Hosting By Apache Httpd
+# Web Hosting By Apache apache2 in Ubuntu
 
-## Install Apache Httpd in your system 
-
-```
-root@jarvis:~# yum install httpd -y
-```
-
-## Start and enable Apache Httpd
+## Install Apache apache2 in your system 
 
 ```
-root@jarvis:~# systemctl enable --now httpd 
+root@jarvis:~# apt install apache2
 ```
-Now for checking that httpd server is working or not , type your ip in browser <br> and if you see this page then your httpd is working !!
 
-![httpd](httpd.png)
+## Start and enable Apache apache2
+
+```
+root@jarvis:~# systemctl enable --now apache2
+```
+Now for checking that apache2 server is working or not , type your ip in browser <br> and if you see this page then your apache is working !!
+
+![apache2](apache2.png)
 
 ## Now for hosting a web page on your server 
 ### change directory to /var/www/html
 
 Now open any text editor like vim , nano and write your html code under ``` "index.html"  ```
 
-## Configuration of Httpd
+## Configuration of Apache2
 
-The main configuration file of httpd is ``` /etc/httpd/conf/httpd.conf ``` 
+The main configuration file of apache2 is ``` /etc/apache2/apache2.conf ``` 
 
 
-### To change document root , edit in httpd.conf 
+### To change document root , edit in apache2.conf 
 ``` 
 <Directory "/var/www/html">
    
 ```
-### Restart httpd service
+### Restart apache2 service
 ```
-root@jarvis:~# systemctl restart httpd
+root@jarvis:~# systemctl restart apache2
 ```
-### To check status of httpd 
+### To check status of apache2
 ```
-root@jarvis:~# systemctl status httpd
+root@jarvis:~# systemctl status apache2
 ```
 
